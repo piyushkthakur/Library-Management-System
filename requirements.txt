@@ -1,0 +1,15 @@
+# Library Management System — Version 1.0 dependencies
+# Stack per Volume 1, Chapter 18 (Technology Stack)
+flet==0.86.4
+flet-charts>=0.86
+SQLAlchemy>=2.0
+alembic>=1.13
+PyMySQL>=1.1
+bcrypt>=4.1
+python-dotenv>=1.0
+matplotlib>=3.8
+qrcode>=8.0
+reportlab>=4.2
+openpyxl>=3.1
+xlrd>=1.2,<2.0
+certifi

@@ -1,0 +1,15 @@
+# Ruff lint configuration.
+# BLE001 is suppressed repo-wide: the codebase deliberately uses broad
+# `except Exception` as a translation boundary (BaseRepository._translate,
+# Database.session_scope), never bare `except:`.
+# DTZ is suppressed repo-wide: the app stores naive local datetimes in MySQL
+# DATETIME columns and reads/writes `date.today()`/`datetime.now()` everywhere
+# by consistent convention; no timezone handling exists.
+target-version = "py311"
+line-length = 100
+
+[lint]
+ignore = ["BLE001", "DTZ001", "DTZ005", "DTZ011", "DTZ006", "S110"]
+
+[lint.per-file-ignores]
+"tests/ui/_visual_harness.py" = ["I001"]

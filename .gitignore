@@ -1,0 +1,26 @@
+# Secrets — .env holds real SMTP credentials, never commit it
+.env
+
+# Build / packaging artifacts (regenerable, ~1 GB)
+dist/
+build/
+packaging/output/
+packaging/vendor/
+packaging/hook_stub/
+
+# Python
+__pycache__/
+*.py[cod]
+.ruff_cache/
+.pytest_cache/
+
+# Logs
+*.log
+
+# Documentation volumes (kept local; screenshots live in docs/screenshots/)
+Development Docs/
+docs/*.docx
+
+# OS junk
+Thumbs.db
+.DS_Store
