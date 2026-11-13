@@ -16,9 +16,7 @@ A desktop application for schools and small libraries to manage their book colle
 3. [Quick start (run from source)](#quick-start-run-from-source)
 4. [Using the app](#using-the-app)
 5. [Configuration (.env)](#configuration-env)
-6. [Tests and lint](#tests-and-lint)
-7. [Building the Windows installer](#building-the-windows-installer)
-8. [Project structure](#project-structure)
+6. [Project structure](#project-structure)
 
 ---
 
@@ -75,9 +73,9 @@ A desktop application for schools and small libraries to manage their book colle
 
 **Login & first-run setup**
 
-![Login](docs/screenshots/login.png)
-
 ![Admin registration](docs/screenshots/admin-registration.png)
+
+![Login](docs/screenshots/login.png)
 
 **Dashboard**
 
@@ -178,27 +176,6 @@ Copy `.env.example` to `.env` and fill in real values. **Never commit `.env`** (
 
 ---
 
-## Tests and lint
-
-```bash
-python -m unittest discover -s tests    # run all tests
-ruff check                              # lint
-```
-
----
-
-## Building the Windows installer
-
-One command (build machine needs Python 3.11 + PyInstaller, Inno Setup 6/7, and the vendor files — see [`packaging/README.md`](packaging/README.md)):
-
-```bat
-packaging\build_installer.bat
-```
-
-Output: `packaging\output\LibraryManagementSystem-Setup-1.0.exe` (~300 MB — bundles the app, the official XAMPP installer and the VC++ runtime). The setup detects an existing XAMPP; on first launch the app provisions the database itself. Details: [`packaging/README.md`](packaging/README.md).
-
----
-
 ## Project structure
 
 ```
@@ -224,9 +201,3 @@ run.py / start.py / start.bat / flet.cmd   # launchers
 ```
 
 **Stack:** Flet 0.86.4 · SQLAlchemy 2 · Alembic · PyMySQL · bcrypt · ReportLab · OpenPyXL · matplotlib · qrcode · python-dotenv
-
----
-
-## License
-
-All rights reserved — contact the author for usage terms.
