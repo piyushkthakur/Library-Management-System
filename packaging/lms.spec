@@ -72,7 +72,7 @@ a = Analysis(
         "win32com",
         "sklearn",
         "plotly",
-        "tkinter",
+        # tkinter NOT excluded: import_books_dialog.py uses it (file picker)
         "pygame",
     ],
     noarchive=False,
